@@ -4,9 +4,7 @@ export async function getSubInCategory(categoryId:string){
   );
 
   if (!response.ok) {
-    throw new Error(
-      `Failed to fetch category`,
-    );
+    throw new Error(`Failed to fetch subcategories: ${response.status} ${response.statusText}`);
   }
 
   return response.json();
