@@ -15,7 +15,7 @@ export default async function subCategories({ params }: { params: Promise<{ id: 
                 <Link href={"/Categories"} className="mb-6 text-gray-600 hover:text-green-600 flex items-center gap-2"><FaArrowLeft />
                     Back To Categories</Link>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-4 sm:gap-6">
-                    <SubCategory />
+                    <SubCategory categoryId={id} />
                 </div>
             </div>
         </div>

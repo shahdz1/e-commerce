@@ -1,10 +1,10 @@
 import { Category } from "@/interface/cartList.interface";
-import { getSubCategories } from "@/services/allSubCategory";
+import { getSubInCategory } from "@/services/subcategoryInCategory";
 import Link from "next/link";
 import { FaArrowRight, FaFolderOpen } from "react-icons/fa";
 
-export default async function subCategory() {
-    const response = await getSubCategories();
+export default async function subCategory({ categoryId }: { categoryId: string }) {
+    const response = await getSubInCategory(categoryId);
     const categories = response.data
     return (
         <>
